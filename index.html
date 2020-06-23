@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html>
+   <head>
+   	
+   	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+      
+      <link rel="stylesheet" type="text/css" href="style.css">
+      <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+      <link rel="shortcut icon" type="image/png" href="favicon.png">
+      <title>الرعاية الصحية</title>
+      <style>body, html {
+         padding: 0;
+         margin: 0;
+         max-width: 100% !important;
+         max-width: 100% !important;
+         width: 100% !important;
+         }
+      </style>
+      
+      <style type="text/css">
+      	/* Slider */
+.slick-slide {
+    margin: 0px 20px;
+}
+
+.slick-slide img {
+    width: 100%;
+}
+
+.slick-slider
+{
+    position: relative;
+
+    display: block;
+    box-sizing: border-box;
+
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list
+{
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+
+    margin: 0;
+    padding: 0;
+}
+.slick-list:focus
+{
+    outline: none;
+}
+.slick-list.dragging
+{
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list
+{
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+         -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.slick-track
+{
+    position: relative;
+    top: 0;
+    left: 0;
+
+    display: block;
+}
+.slick-track:before,
+.slick-track:after
+{
+    display: table;
+
+    content: '';
+}
+.slick-track:after
+{
+    clear: both;
+}
+.slick-loading .slick-track
+{
+    visibility: hidden;
+}
+
+.slick-slide
+{
+    display: none;
+    float: left;
+
+    height: 100%;
+    min-height: 1px;
+}
+[dir='rtl'] .slick-slide
+{
+    float: right;
+}
+.slick-slide img
+{
+    display: block;
+}
+.slick-slide.slick-loading img
+{
+    display: none;
+}
+.slick-slide.dragging img
+{
+    pointer-events: none;
+}
+.slick-initialized .slick-slide
+{
+    display: block;
+}
+.slick-loading .slick-slide
+{
+    visibility: hidden;
+}
+.slick-vertical .slick-slide
+{
+    display: block;
+
+    height: auto;
+
+    border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}
+.imglen{
+	width: 200px;
+	height: 150px;
+}
+   .myStyle1{
+   	position: fixed;
+   	overflow: visible;
+   	opacity: 1;
+   }   
+      </style>
+    
+      
+   </head>
+   <body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0" data-gr-c-s-loaded="true" cz-shortcut-listen="true">
+      <div id="app" dir="rtl">
+         <div data-v-2b077293="" id="Header">
+            <div data-v-2b077293="" data-aos="fade-left" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-anchor-placement="top-center" class="logo aos-init aos-animate"><img data-v-2b077293="" src="logo.png" alt="شعار الرعاية الصحية"></div>
+            <div data-v-2b077293 class="nav">
+               <div data-v-2b077293 data-aos="fade-down" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-anchor-placement="top-center" class="menu aos-init aos-animate">
+                  <ul data-v-2b077293 class="" id="myList">
+                     <li data-v-2b077293 class="menuToggle" onclick="MyFunction()">
+                        <svg data-v-2b077293 aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svg-inline--fa fa-bars fa-w-14">
+                           <path data-v-2b077293 fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" class=""></path>
+                        </svg>
+                        القائمة
+                     </li>
+                     <li data-v-2b077293 onclick="MyFunctionClose()" style="display: none;" id="cros"><a data-v-2b077293 href="#" class="" ><img src="Cross.png" width="15" height="15"></a></li>
+                     <!----> 
+                     <li data-v-2b077293><a data-v-2b077293 href="#" class="router-link-exact-active router-link-active">الرئيسية</a></li>
+                     <li data-v-2b077293><a data-v-2b077293 href="/Medical-Network" class="">الشبكة الطبية</a></li>
+                     <li data-v-2b077293><a data-v-2b077293 href="/serviceNet" class="">الخدمات المساندة</a></li>
+                     <li data-v-2b077293><a data-v-2b077293 href="/Offers" class="">عروض</a></li>
+                     <li data-v-2b077293><a data-v-2b077293 href="/Subscribe" class=""> اطلب البطاقة</a></li>
+                     <li data-v-2b077293><a data-v-2b077293 href="/Contact-Us" class="">تواصل معنا</a></li>
+                     <li data-v-2b077293><a data-v-2b077293 href="/About" class="">من نحن</a></li>
+                     <li data-v-2b077293><a data-v-2b077293 style="cursor: pointer;">English</a></li>
+                  </ul>
+               </div>
+               <div data-v-2b077293 class="search">
+                  <div data-v-2b077293 class="search-bar">
+                     <input data-v-2b077293 type="text" placeholder="البحث"> 
+                     <svg data-v-2b077293 aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="sOpen svg-inline--fa fa-search fa-w-16">
+                        <path data-v-2b077293 fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z" class=""></path>
+                     </svg>
+                     <!---->
+                  </div>
+                  <!----> 
+                  <div data-v-2b077293="" class="nav-icons">
+                     <div data-v-2b077293="" class="notifications">
+                        <svg data-v-2b077293="" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bell" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svg-inline--fa fa-bell fa-w-14 fa-2x" onclick="myAddNoti()">
+                           <path data-v-2b077293="" fill="currentColor" d="M224 512c35.32 0 63.97-28.65 63.97-64H160.03c0 35.35 28.65 64 63.97 64zm215.39-149.71c-19.32-20.76-55.47-51.99-55.47-154.29 0-77.7-54.48-139.9-127.94-155.16V32c0-17.67-14.32-32-31.98-32s-31.98 14.33-31.98 32v20.84C118.56 68.1 64.08 130.3 64.08 208c0 102.3-36.15 133.53-55.47 154.29-6 6.45-8.66 14.16-8.61 21.71.11 16.4 12.98 32 32.1 32h383.8c19.12 0 32-15.6 32.1-32 .05-7.55-2.61-15.27-8.61-21.71z" class=""></path>
+                        </svg>
+                        <div data-v-2b077293="" class="counter">10</div>
+                        <div data-v-2b077293="" class="nDropDown" id="myNoti">
+                           <ul data-v-2b077293 style="background-color: white;">
+                              <div data-v-2b077293="" style="text-align: center;">
+                                 <!----> <!----> 
+                                 <li data-v-2b077293="" onclick="CloseNoti()" style="text-align: center;">
+                                 	<a href="#" onclick="CloseNoti()">
+                                    <img src="Cross.png" width="15" height="15">
+                                   </a>
+                                 </li>
+                                 <!---->
+                              </div>
+                              <div data-v-2b077293="">
+                                 <!----> <!----> 
+                                 <li data-v-2b077293="">
+                                    <div data-v-2b077293="" class="nImg"><img src="notifi.png"></div>
+                                    <div data-v-2b077293="" class="nDetails">
+                                       <h3 data-v-2b077293="">صيدلية درب الامل الحديثة 1 - المدينة المنورة</h3>
+                                    </div>
+                                 </li>
+                                 <!---->
+                              </div>
+                              <div data-v-2b077293="">
+                                 <!----> <!----> 
+                                 <li data-v-2b077293="">
+                                    <div data-v-2b077293="" class="nImg"><img src="notifi.png"></div>
+                                    <div data-v-2b077293="" class="nDetails">
+                                       <h3 data-v-2b077293="">مركز ذوي الهمم الطبي - المدينة المنورة</h3>
+                                    </div>
+                                 </li>
+                                 <!---->
+                              </div>
+                              <div data-v-2b077293="">
+                                 <li data-v-2b077293="">
+                                    <div data-v-2b077293="" class="nImg"><img src="notifi.png"></div>
+                                    <div data-v-2b077293="" class="nDetails">
+                                       <h3 data-v-2b077293="">مركز اضواء العالمي للحجامة - جنوب الرياض</h3>
+                                    </div>
+                                 </li>
+                                 <!----> <!----> <!---->
+                              </div>
+                              <div data-v-2b077293="">
+                                 <li data-v-2b077293="">
+                                    <div data-v-2b077293="" class="nImg"><img src="notifi.png"></div>
+                                    <div data-v-2b077293="" class="nDetails">
+                                       <h3 data-v-2b077293="">مجمع العميس الطبي - خميس مشيط</h3>
+                                    </div>
+                                 </li>
+                                 <!----> <!----> <!---->
+                              </div>
+                              <div data-v-2b077293="">
+                                 <li data-v-2b077293="">
+                                    <div data-v-2b077293="" class="nImg"><img src="notifi.png"></div>
+                                    <div data-v-2b077293="" class="nDetails">
+                                       <h3 data-v-2b077293="">مجمع شعاع الطبي لطب وتقويم الاسنان - خميس مشيط</h3>
+                                    </div>
+                                 </li>
+                                 <!----> <!----> <!---->
+                              </div>
+                              <div data-v-2b077293="">
+                                 <li data-v-2b077293="">
+                                    <div data-v-2b077293="" class="nImg"><img src="notifi.png"></div>
+                                    <div data-v-2b077293="" class="nDetails">
+                                       <h3 data-v-2b077293="">مستشفى الدكتور الحسن النعمي التخصصي– الدمام</h3>
+                                    </div>
+                                 </li>
+                                 <!----> <!----> <!---->
+                              </div>
+                              <div data-v-2b077293="">
+                                 <li data-v-2b077293="">
+                                    <div data-v-2b077293="" class="nImg"><img src="notifi.png"></div>
+                                    <div data-v-2b077293="" class="nDetails">
+                                       <h3 data-v-2b077293="">عرض خاص من مركز عيون الجوهرة للبصريات – الورود</h3>
+                                    </div>
+                                 </li>
+                                 <!----> <!----> <!---->
+                              </div>
+                              <div data-v-2b077293="">
+                                 <li data-v-2b077293="">
+                                    <div data-v-2b077293="" class="nImg"><img src="notifi.png"></div>
+                                    <div data-v-2b077293="" class="nDetails">
+                                       <h3 data-v-2b077293="">عروض يوم الجمعة من مجمع عيادات مرجان السعودية الطبى - الدمام</h3>
+                                    </div>
+                                 </li>
+                                 <!----> <!----> <!---->
+                              </div>
+                              <div data-v-2b077293="">
+                                 <!----> <!----> 
+                                 <li data-v-2b077293="">
+                                    <div data-v-2b077293="" class="nImg"><img src="notifi.png"></div>
+                                    <div data-v-2b077293="" class="nDetails">
+                                       <h3 data-v-2b077293="">صيدلية التلال الحديثة - المدينة المنورة</h3>
+                                    </div>
+                                 </li>
+                                 <!---->
+                              </div>
+                              <div data-v-2b077293="">
+                                 <!----> <!----> 
+                                 <li data-v-2b077293="">
+                                    <div data-v-2b077293="" class="nImg"><img src="notifi.png"></div>
+                                    <div data-v-2b077293="" class="nDetails">
+                                       <h3 data-v-2b077293="">صيدلية أنس الجوار للأدوية - المدينة المنورة</h3>
+                                    </div>
+                                 </li>
+                                 <!---->
+                              </div>
+                              <!---->
+                           </ul>
+                        </div>
+                     </div>
+                     <div data-v-2b077293="" class="countries-list">
+                        <div data-v-2b077293="" class="dropdown" style="float: right;">
+                           <svg data-v-2b077293="" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="globe" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" class="svg-inline--fa fa-globe fa-w-16 fa-2x">
+                              <path data-v-2b077293="" fill="currentColor" d="M336.5 160C322 70.7 287.8 8 248 8s-74 62.7-88.5 152h177zM152 256c0 22.2 1.2 43.5 3.3 64h185.3c2.1-20.5 3.3-41.8 3.3-64s-1.2-43.5-3.3-64H155.3c-2.1 20.5-3.3 41.8-3.3 64zm324.7-96c-28.6-67.9-86.5-120.4-158-141.6 24.4 33.8 41.2 84.7 50 141.6h108zM177.2 18.4C105.8 39.6 47.8 92.1 19.3 160h108c8.7-56.9 25.5-107.8 49.9-141.6zM487.4 192H372.7c2.1 21 3.3 42.5 3.3 64s-1.2 43-3.3 64h114.6c5.5-20.5 8.6-41.8 8.6-64s-3.1-43.5-8.5-64zM120 256c0-21.5 1.2-43 3.3-64H8.6C3.2 212.5 0 233.8 0 256s3.2 43.5 8.6 64h114.6c-2-21-3.2-42.5-3.2-64zm39.5 96c14.5 89.3 48.7 152 88.5 152s74-62.7 88.5-152h-177zm159.3 141.6c71.4-21.2 129.4-73.7 158-141.6h-108c-8.8 56.9-25.6 107.8-50 141.6zM19.3 352c28.6 67.9 86.5 120.4 158 141.6-24.4-33.8-41.2-84.7-50-141.6h-108z" class=""></path>
+                           </svg>
+                           <div data-v-2b077293="" class="dropdown-content"><a data-v-2b077293="">السعودية</a><a data-v-2b077293="">البحرين</a><a data-v-2b077293="">تركيا</a></div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="header-fix"></div>
+         <div id="Home">
+            <div class="hSocial">
+               <ul>
+                  <li><a target="_blank" href="http://api.whatsapp.com/send?phone=966534016244"><img src="whatsapp.png"></a></li>
+                  <li><a target="_blank" href="https://twitter.com/Alreaaiaa"><img src="twitter.png"></a></li>
+                  <li><a target="_blank" href="https://www.instagram.com/alreaaiaa/"><img src="instagram.png"></a></li>
+                  <li><a target="_blank" href="https://www.facebook.com/Alreaaiaa"><img src="facebook.png"></a></li>
+                  <li><a target="_blank" href="https://www.youtube.com/watch?v=UBekI73rvFU&amp;t=4s"><img src="youtube.png"></a></li>
+                  <li><a target="_blank" href="https://snapchat.com/add/Alreaaiaa"><img src="snapchat.png"></a></li>
+               </ul>
+            </div>
+            <div data-aos="fade-up" data-aos-duration="500" data-aos-once="false" data-aos-easing="ease-in-out" data-aos-anchor-placement="top-center" class="heroSection aos-init aos-animate">
+               <div data-aos="fade-left" data-aos-delay="350" data-aos-duration="500" data-aos-once="false" data-aos-easing="ease-in-out" data-aos-anchor-placement="top-center" class="video aos-init aos-animate" style="float: right;"><iframe width="360" height="225" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen" style="float: right;" src="https://www.youtube.com/embed/UBekI73rvFU?version=3&amp;start=00&amp;end=224&amp;autoplay=1&amp;loop=0&amp;showinfo=0&amp;controls=0&amp;rel=0&amp;playlist=0&amp;color=white&amp;iv_load_policy=3"></iframe></div>
+               <div data-aos="fade-right" data-aos-offset="-300" data-aos-delay="350" data-aos-duration="500" data-aos-once="false" data-aos-easing="ease-in-out" data-aos-anchor-placement="top-center" class="text aos-init aos-animate" style="float: right;">
+                  <h1 dir="rtl">خصومات طبية حتى 80% في كافة التخصصات الصحية</h1>
+                  <a href="/Medical-Network" class="" style="float: right;">الشبكة الطبية</a> <a href="/Subscribe" class="" style="float: right; margin-right: 20px;"> اطلب البطاقة</a>
+               </div>
+            </div>
+            <img src="bg.png" alt="bg" class="homeBg"> 
+            <div class="cards">
+               <div data-aos="zoom-in-left" data-aos-offset="-200" data-aos-duration="500" data-aos-delay="450" data-aos-easing="ease-in-out" data-aos-anchor-placement="top-center" class="card aos-init aos-animate">
+                  <div class="cBody">
+                     <a href="/Contracts" class="">
+                        <div class="cImg"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQkAAACbCAIAAAD+0/nPAAAACXBIWXMAAAsTAAALEwEAmpwYAAAGymlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDIgNzkuMTYwOTI0LCAyMDE3LzA3LzEzLTAxOjA2OjM5ICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdEV2dD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlRXZlbnQjIiB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOCAoV2luZG93cykiIHhtcDpDcmVhdGVEYXRlPSIyMDE4LTA3LTI0VDIyOjUxOjEzKzAyOjAwIiB4bXA6TWV0YWRhdGFEYXRlPSIyMDE4LTA3LTI0VDIyOjUzOjQzKzAyOjAwIiB4bXA6TW9kaWZ5RGF0ZT0iMjAxOC0wNy0yNFQyMjo1Mzo0MyswMjowMCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo3NDQyMWY1Yi1lZmYxLTg1NDgtYTY5MC01N2IwNzRmMGNmNGQiIHhtcE1NOkRvY3VtZW50SUQ9ImFkb2JlOmRvY2lkOnBob3Rvc2hvcDo2OGE2Njg1MC1iM2E3LTU0NGMtOTRjZC0xNWM5ZDc1NmIyZjAiIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpkYTk5M2JhOS03NzRhLTVhNDktYTE0MC1iZTBjZDcwNWZkNzgiIGRjOmZvcm1hdD0iaW1hZ2UvcG5nIiBwaG90b3Nob3A6Q29sb3JNb2RlPSIzIiBwaG90b3Nob3A6SUNDUHJvZmlsZT0ic1JHQiBJRUM2MTk2Ni0yLjEiPiA8eG1wTU06SGlzdG9yeT4gPHJkZjpTZXE+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJjcmVhdGVkIiBzdEV2dDppbnN0YW5jZUlEPSJ4bXAuaWlkOmRhOTkzYmE5LTc3NGEtNWE0OS1hMTQwLWJlMGNkNzA1ZmQ3OCIgc3RFdnQ6d2hlbj0iMjAxOC0wNy0yNFQyMjo1MToxMyswMjowMCIgc3RFdnQ6c29mdHdhcmVBZ2VudD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTggKFdpbmRvd3MpIi8+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJzYXZlZCIgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDo0MDgzMGFkMi1iMTVkLTY3NDktOWU4MS1hNjRmMzA3ZjUxZGEiIHN0RXZ0OndoZW49IjIwMTgtMDctMjRUMjI6NTE6MTMrMDI6MDAiIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkFkb2JlIFBob3Rvc2hvcCBDQyAyMDE4IChXaW5kb3dzKSIgc3RFdnQ6Y2hhbmdlZD0iLyIvPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0ic2F2ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6NzQ0MjFmNWItZWZmMS04NTQ4LWE2OTAtNTdiMDc0ZjBjZjRkIiBzdEV2dDp3aGVuPSIyMDE4LTA3LTI0VDIyOjUzOjQzKzAyOjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOCAoV2luZG93cykiIHN0RXZ0OmNoYW5nZWQ9Ii8iLz4gPC9yZGY6U2VxPiA8L3htcE1NOkhpc3Rvcnk+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+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" alt="Contracts" data-aos="fade-down" data-aos-offset="-300" data-aos-duration="500" data-aos-delay="450" data-aos-easing="ease-in-out" data-aos-anchor-placement="top-center" class="aos-init aos-animate"></div>
+                        <div data-aos="fade-up" data-aos-offset="-350" data-aos-duration="500" data-aos-delay="450" data-aos-easing="ease-in-out" data-aos-anchor-placement="top-center" class="cText aos-init aos-animate">
+                           <h1>تعاقدات</h1>
+                           <p>تعرف على التعاقدات الجديدة المنضمة لشبكة خدمة بطاقة الرعاية الصحية</p>
+                        </div>
+                     </a>
+                  </div>
+               </div>
+               <div data-aos="fade-up" data-aos-offset="-200" data-aos-duration="500" data-aos-delay="450" data-aos-easing="ease-in-out" data-aos-anchor-placement="top-center" class="card aos-init aos-animate">
+                  <div class="cBody active">
+                     <a href="/Events" class="">
+                        <div class="cImg"><img src="events.png" alt="Events" data-aos="fade-down" data-aos-offset="-300" data-aos-duration="500" data-aos-delay="450" data-aos-easing="ease-in-out" data-aos-anchor-placement="top-center" class="aos-init aos-animate"></div>
+                        <div data-aos="fade-up" data-aos-offset="-350" data-aos-duration="500" data-aos-delay="450" data-aos-easing="ease-in-out" data-aos-anchor-placement="top-center" class="cText aos-init aos-animate">
+                           <h1>فعاليات</h1>
+                           <p>تابع معنا احدث فعاليات بطاقة الرعاية الصحية و شاهد صور موثقة من الفعاليات</p>
+                        </div>
+                     </a>
+                  </div>
+               </div>
+               <div data-aos="zoom-in-right" data-aos-offset="-200" data-aos-duration="500" data-aos-delay="450" data-aos-easing="ease-in-out" data-aos-anchor-placement="top-center" class="card aos-init aos-animate">
+                  <div class="cBody">
+                     <a href="/Awards" class="">
+                        <div class="cImg"><img src="awards.png" alt="Awards" data-aos="fade-down" data-aos-offset="-300" data-aos-duration="500" data-aos-delay="450" data-aos-easing="ease-in-out" data-aos-anchor-placement="top-center" class="aos-init aos-animate"></div>
+                        <div data-aos="fade-up" data-aos-offset="-350" data-aos-duration="500" data-aos-delay="450" data-aos-easing="ease-in-out" data-aos-anchor-placement="top-center" class="cText aos-init aos-animate">
+                           <h1>تكريمات</h1>
+                           <p>التكريمات و الجوائز التي حصلت عليها بطاقة الرعاية الصحية من قبل المسؤلين</p>
+                        </div>
+                     </a>
+                  </div>
+               </div>
+            </div>
+            <div data-aos="fade-up" data-aos-offset="-200" data-aos-delay="50" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-center" class="partners aos-init aos-animate">
+               <h1>شركاء النجاح</h1>
+               <div dir="ltr" class="pSlider">
+                <br><br>
+                 
+                        <div class="customer-logos">
+                           <div class="slide">
+                              <img src="https://api.alreaaiaa.com/image/photo-1538306509.png" class="imglen" alt="وزارة العدل"> 
+                              <h4>وزارة العدل</h4>
+                           </div>
+                           <div class="slide">
+                              <img src="https://api.alreaaiaa.com/image/photo-1538306890.png" class="imglen" alt="إدارة المجاهدين-الرياض"> 
+                              <h4>إدارة المجاهدين-الرياض</h4>
+                           </div>
+                           <div class="slide">
+                              <img src="https://api.alreaaiaa.com/image/photo-1538306559.png" class="imglen" alt="الجامعة العربية المفتوحة"> 
+                              <h4>الجامعة العربية المفتوحة</h4>
+                           </div>
+                           <div class="slide">
+                              <img src="https://api.alreaaiaa.com/image/photo-1538306594.png" class="imglen" alt="مكنون-جمعية تحفيظ القرآن"> 
+                              <h4>مكنون-جمعية تحفيظ القرآن</h4>
+                           </div>
+                           <div class="slide">
+                              <img src="https://api.alreaaiaa.com/image/photo-1538306616.png" class="imglen" alt="مكتب التعليم بالعزيزية"> 
+                              <h4>مكتب التعليم بالعزيزية</h4>
+                           </div>
+                           <div class="slide">
+                              <img src="https://api.alreaaiaa.com/image/photo-1538306682.png" class="imglen" alt="نادي رياضة ذوي الاحتياجات الخاصة"> 
+                              <h4>نادي رياضة ذوي الاحتياجات الخاصة</h4>
+                           </div>
+                           <div class="slide">
+                              <img src="https://api.alreaaiaa.com/image/photo-1538304907.png" class="imglen" alt="الهيئة السعودية للمحامين"> 
+                              <h4>الهيئة السعودية للمحامين</h4>
+                           </div>
+                           <div class="slide">
+                              <img src="https://api.alreaaiaa.com/image/photo-1538306708.png" class="imglen" alt="سواعد-لذوي الاعاقة الحركية"> 
+                              <h4>سواعد-لذوي الاعاقة الحركية</h4>
+                           </div>
+                           <div class="slide VueCarousel-slide-active">
+                              <img src="https://api.alreaaiaa.com/image/photo-1538305258.png" class="imglen" alt="جمعية أسر التوحد الخيرية"> 
+                              <h4>جمعية أسر التوحد الخيرية</h4>
+                           </div>
+                           <div class="slide VueCarousel-slide-active">
+                              <img src="https://api.alreaaiaa.com/image/photo-1538306987.png" class="imglen" alt="دسكا"> 
+                              <h4>دسكا</h4>
+                           </div>
+                           <div class="slide">
+                              <img src="https://api.alreaaiaa.com/image/photo-1538307057.png" class="imglen" alt="وفاء لرعاية الطلاب والطالبات"> 
+                              <h4>وفاء لرعاية الطلاب والطالبات</h4>
+                           </div>
+                           <div class="slide">
+                              <img src="https://api.alreaaiaa.com/image/photo-1538307101.png" class="imglen" alt="فريق التأهيل الدولي"> 
+                              <h4>فريق التأهيل الدولي</h4>
+                           </div>
+                           <div class="slide">
+                              <img src="https://api.alreaaiaa.com/image/photo-1538307202.png" class="imglen" alt="الجمعية الخيرية لمتلازمة داون"> 
+                              <h4>الجمعية الخيرية لمتلازمة داون</h4>
+                           </div>
+                           <div class="slide">
+                              <img src="https://api.alreaaiaa.com/image/photo-1538307291.png" class="imglen" alt="جمعية أرفى"> 
+                              <h4>جمعية أرفى</h4>
+                           </div>
+                           <div class="slide">
+                              <img src="https://api.alreaaiaa.com/image/photo-1538307337.png" class="imglen" alt="الجمعية السعودية الخيرية"> 
+                              <h4>الجمعية السعودية الخيرية</h4>
+                           </div>
+                           <div class="slide">
+                              <img src="https://api.alreaaiaa.com/image/photo-1538307493.png" class="imglen" alt="جمعية المنتجين والموزعين السعوديين"> 
+                              <h4>جمعية المنتجين والموزعين السعوديين</h4>
+                           </div>
+                           <div class="slide">
+                              <img src="https://api.alreaaiaa.com/image/photo-1538307691.png" class="imglen" alt="معهد التربية الفكرية"> 
+                              <h4>معهد التربية الفكرية</h4>
+                           </div>
+                           <div class="slide">
+                              <img src="https://api.alreaaiaa.com/image/photo-1538307758.png" class="imglen" alt="جمعية خميس مشيط"> 
+                              <h4>جمعية خميس مشيط</h4>
+                           </div>
+                           <div class="slide">
+                              <img src="https://api.alreaaiaa.com/image/photo-1548751943.png" class="imglen" alt="محافظة النعيرية"> 
+                              <h4>محافظة النعيرية</h4>
+                           </div>
+                           <div class="slide">
+                              <img src="https://api.alreaaiaa.com/image/photo-1548751923.png" class="imglen" alt="محافظة القطيف"> 
+                              <h4>محافظة القطيف</h4>
+                           </div>
+                           <div class="slide">
+                              <img src="https://api.alreaaiaa.com/image/photo-1548752204.png" class="imglen" alt="مكتب التعليم بشرق الدمام"> 
+                              <h4>مكتب التعليم بشرق الدمام</h4>
+                           </div>
+                           <div class="slide">
+                              <img src="https://api.alreaaiaa.com/image/photo-1548752235.png" class="imglen" alt="مكتب التعليم بالظهران"> 
+                              <h4>مكتب التعليم بالظهران</h4>
+                           </div>
+                           <div class="slide">
+                              <img src="https://api.alreaaiaa.com/image/photo-1548752280.png" class="imglen" alt="مكتب تعليم راس تنورة بنات"> 
+                              <h4>مكتب تعليم راس تنورة بنات</h4>
+                           </div>
+                           <div class="slide">
+                              <img src="https://api.alreaaiaa.com/image/photo-1548755086.png" class="imglen" alt="جمعية مضر الخيرية للخدمات الاجتماعية بالقديح"> 
+                              <h4>جمعية مضر الخيرية للخدمات الاجتماعية بالقديح</h4>
+                           </div>
+                           <div class="slide">
+                              <img src="https://api.alreaaiaa.com/image/photo-1548755137.png" class="imglen" alt="جمعية فتاة الأحساء الخيرية"> 
+                              <h4>جمعية فتاة الأحساء الخيرية</h4>
+                           </div>
+                           <div class="slide">
+                              <img src="https://api.alreaaiaa.com/image/photo-1551381414.png" class="imglen" alt="جمعية فتاة الخليج الخيرية النسائية بالخبر"> 
+                              <h4>جمعية فتاة الخليج الخيرية النسائية بالخبر</h4>
+                           </div>
+                           <div class="slide">
+                              <img src="https://api.alreaaiaa.com/image/photo-1564310399.png" class="imglen" alt="فريق الإعلام الجديد"> 
+                              <h4>فريق الإعلام الجديد</h4>
+                           </div>
+                           <div class="slide">
+                              <img src="https://api.alreaaiaa.com/image/photo-1564469374.png" class="imglen" alt="جمعية مكافحة السرطان الخيرية - الاحساء"> 
+                              <h4>جمعية مكافحة السرطان الخيرية - الاحساء</h4>
+                           </div>
+                           <div class="slide">
+                              <img src="https://api.alreaaiaa.com/image/photo-1564471335.png" class="imglen" alt="المؤسسة العامة للتدريب التقني - الاحساء"> 
+                              <h4>المؤسسة العامة للتدريب التقني - الاحساء</h4>
+                           </div>
+                           <div class="slide">
+                              <img src="https://api.alreaaiaa.com/image/photo-1564903225.png" class="imglen" alt="جمعية رعاية الأيتام - حفر الباطن"> 
+                              <h4>جمعية رعاية الأيتام - حفر الباطن</h4>
+                           </div>
+                           <div class="slide">
+                              <img src="https://api.alreaaiaa.com/image/photo-1564903279.png" class="imglen" alt="جمعية البر - حفر الباطن"> 
+                              <h4>جمعية البر - حفر الباطن</h4>
+                           </div>
+                           <div class="slide">
+                              <img src="https://api.alreaaiaa.com/image/photo-1567938198.png" class="imglen" alt="جمعية أيتام الجبيل"> 
+                              <h4>جمعية أيتام الجبيل</h4>
+                           </div>
+                           <div class="slide">
+                              <img src="https://api.alreaaiaa.com/image/photo-1568542227.png" class="imglen" alt="جمعيه عزم للرعاية النهارية - القصيم"> 
+                              <h4>جمعيه عزم للرعاية النهارية - القصيم</h4>
+                           </div>
+                           <div class="slide">
+                              <img src="https://api.alreaaiaa.com/image/photo-1568713955.png" class="imglen" alt="جمعية المنال بالخبر"> 
+                              <h4>جمعية المنال بالخبر</h4>
+                           </div>
+                        </div>
+                     </div>
+                   
+                 
+               </div>
+            </div>
+            <div id="footerL">
+               <div class="footerBg">
+                  <div class="footerCont">
+                     <div class="footerImg"><img src="mobileChat.png" alt="Mobile Chat" data-aos="fade-left" data-aos-offset="-200" data-aos-delay="150" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-center" class="aos-init aos-animate"></div>
+                     <div class="footerText">
+                        <div class="fTextCont">
+                           <h1 data-aos="fade-down" data-aos-offset="-200" data-aos-delay="250" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-center" class="aos-init aos-animate">حمل التطبيق الآن</h1>
+                           <h3 data-aos="fade-right" data-aos-offset="-200" data-aos-delay="300" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-center" class="aos-init aos-animate">متوفر على</h3>
+                           <div class="appDownloads"><a target="_blank" data-aos="fade-left" data-aos-offset="-300" data-aos-delay="350" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-center" class="ios aos-init aos-animate" href="https://itunes.apple.com/sa/app//id941346493?mt=8"><img src="appiOS.png" alt="iOS App Download"></a> <a target="_blank" data-aos="fade-right" data-aos-offset="-300" data-aos-delay="350" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-center" class="android aos-init aos-animate" href="https://play.google.com/store/apps/details?id=co.itplus.co"><img src="appAndroid.png" alt="Android App Download"></a></div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div id="footer">
+               جميع الحقوق محفوظة للرعاية الصحية © 2018
+               <a href="https://alreaaiaa.com/polices"> سياسة الخصوصية</a>
+            </div>
+         </div>
+      </div>
+     
+      <div id="bDpYFfG-1592736799447" class="" style="display: block !important;">
+         <iframe id="AOvZIWs-1592736799448" src="about:blank" frameborder="0" scrolling="no" title="chat widget" class="open" style="outline: none !important; visibility: visible !important; resize: none !important; box-shadow: none !important; overflow: visible !important; background: none transparent !important; opacity: 1 !important; top: auto !important; right: auto !important; bottom: auto !important; left: auto !important; position: static !important; border: 0px !important; min-height: auto !important; min-width: auto !important; max-height: none !important; max-width: none !important; padding: 0px !important; margin: 0px !important; transition-property: none !important; transform: none !important; width: 350px !important; z-index: 999999 !important; cursor: auto !important; float: none !important; border-radius: unset !important; pointer-events: auto !important; height: 520px !important; display: none !important;"></iframe><iframe id="lQwaoLT-1592736799449" src="about:blank" frameborder="0" scrolling="no" title="chat widget" class="" style="outline: none !important; visibility: visible !important; resize: none !important; box-shadow: none !important; overflow: visible !important; background: none transparent !important; opacity: 1 !important; position: fixed !important; border: 0px !important; padding: 0px !important; transition-property: none !important; z-index: 1000001 !important; cursor: auto !important; float: none !important; pointer-events: auto !important; height: 40px !important; min-height: 40px !important; max-height: 40px !important; width: 260px !important; min-width: 260px !important; max-width: 260px !important; border-radius: 0px !important; transform: rotate(0deg) translateZ(0px) !important; transform-origin: 0px center !important; margin: 0px !important; top: auto !important; bottom: 0px !important; left: 10px !important; right: auto !important; display: block !important;"></iframe><iframe id="bz4WOKM-1592736799450" src="about:blank" frameborder="0" scrolling="no" title="chat widget" class="" style="outline: none !important; visibility: visible !important; resize: none !important; box-shadow: none !important; overflow: visible !important; background: none transparent !important; opacity: 1 !important; position: fixed !important; border: 0px !important; padding: 0px !important; margin: 0px !important; transition-property: none !important; transform: none !important; z-index: 1000003 !important; cursor: auto !important; float: none !important; border-radius: unset !important; pointer-events: auto !important; top: auto !important; bottom: 25px !important; left: 5px !important; right: auto !important; width: 21px !important; max-width: 21px !important; min-width: 21px !important; height: 21px !important; max-height: 21px !important; min-height: 21px !important; display: none !important;"></iframe><iframe id="cZe7t3v-1592736799450" src="about:blank" frameborder="0" scrolling="no" title="chat widget" class="" style="outline: none !important; visibility: visible !important; resize: none !important; box-shadow: none !important; overflow: visible !important; background: none transparent !important; opacity: 1 !important; position: fixed !important; border: 0px !important; padding: 0px !important; transition-property: none !important; cursor: auto !important; float: none !important; border-radius: unset !important; pointer-events: auto !important; transform: rotate(0deg) translateZ(0px) !important; transform-origin: 0px center !important; bottom: 40px !important; top: auto !important; left: 46px !important; right: auto !important; width: 205px !important; max-width: 205px !important; min-width: 205px !important; height: 101px !important; max-height: 101px !important; min-height: 101px !important; z-index: 1000002 !important; margin: 0px !important; display: none !important;"></iframe>
+         <div class="" style="outline: none !important; visibility: visible !important; resize: none !important; box-shadow: none !important; overflow: visible !important; background: none transparent !important; opacity: 1 !important; top: 0px !important; right: auto !important; bottom: auto !important; left: 0px !important; position: absolute !important; border: 0px !important; min-height: auto !important; min-width: auto !important; max-height: none !important; max-width: none !important; padding: 0px !important; margin: 0px !important; transition-property: none !important; transform: none !important; width: 100% !important; height: 100% !important; display: none !important; z-index: 1000001 !important; cursor: move !important; float: left !important; border-radius: unset !important; pointer-events: auto !important;"></div>
+         <div id="kInNM5j-1592736799447" class="" style="outline: none !important; visibility: visible !important; resize: none !important; box-shadow: none !important; overflow: visible !important; background: none transparent !important; opacity: 1 !important; top: 0px !important; right: auto !important; bottom: auto !important; left: 0px !important; position: absolute !important; border: 0px !important; min-height: auto !important; min-width: auto !important; max-height: none !important; max-width: none !important; padding: 0px !important; margin: 0px !important; transition-property: none !important; transform: none !important; width: 6px !important; height: 100% !important; display: block !important; z-index: 999998 !important; cursor: w-resize !important; float: none !important; border-radius: unset !important; pointer-events: auto !important;"></div>
+         <div id="s424Qh4-1592736799447" class="" style="outline: none !important; visibility: visible !important; resize: none !important; box-shadow: none !important; overflow: visible !important; background: none transparent !important; opacity: 1 !important; top: 0px !important; right: 0px !important; bottom: auto !important; left: auto !important; position: absolute !important; border: 0px !important; min-height: auto !important; min-width: auto !important; max-height: none !important; max-width: none !important; padding: 0px !important; margin: 0px !important; transition-property: none !important; transform: none !important; width: 6px !important; height: 100% !important; display: block !important; z-index: 999998 !important; cursor: e-resize !important; float: none !important; border-radius: unset !important; pointer-events: auto !important;"></div>
+         <div id="VJwL9rs-1592736799447" class="" style="outline: none !important; visibility: visible !important; resize: none !important; box-shadow: none !important; overflow: visible !important; background: none transparent !important; opacity: 1 !important; top: 0px !important; right: 0px !important; bottom: auto !important; left: auto !important; position: absolute !important; border: 0px !important; min-height: auto !important; min-width: auto !important; max-height: none !important; max-width: none !important; padding: 0px !important; margin: 0px !important; transition-property: none !important; transform: none !important; width: 100% !important; height: 6px !important; display: block !important; z-index: 999998 !important; cursor: n-resize !important; float: none !important; border-radius: unset !important; pointer-events: auto !important;"></div>
+         <div id="IbggJsI-1592736799447" class="" style="outline: none !important; visibility: visible !important; resize: none !important; box-shadow: none !important; overflow: visible !important; background: none transparent !important; opacity: 1 !important; top: auto !important; right: 0px !important; bottom: 0px !important; left: auto !important; position: absolute !important; border: 0px !important; min-height: auto !important; min-width: auto !important; max-height: none !important; max-width: none !important; padding: 0px !important; margin: 0px !important; transition-property: none !important; transform: none !important; width: 100% !important; height: 6px !important; display: block !important; z-index: 999998 !important; cursor: s-resize !important; float: none !important; border-radius: unset !important; pointer-events: auto !important;"></div>
+         <div id="fotHOLD-1592736799447" class="" style="outline: none !important; visibility: visible !important; resize: none !important; box-shadow: none !important; overflow: visible !important; background: none transparent !important; opacity: 1 !important; top: 0px !important; right: auto !important; bottom: auto !important; left: 0px !important; position: absolute !important; border: 0px !important; min-height: auto !important; min-width: auto !important; max-height: none !important; max-width: none !important; padding: 0px !important; margin: 0px !important; transition-property: none !important; transform: none !important; width: 12px !important; height: 12px !important; display: block !important; z-index: 999998 !important; cursor: nw-resize !important; float: none !important; border-radius: unset !important; pointer-events: auto !important;"></div>
+         <div id="SWBAPzM-1592736799447" class="" style="outline: none !important; visibility: visible !important; resize: none !important; box-shadow: none !important; overflow: visible !important; background: none transparent !important; opacity: 1 !important; top: 0px !important; right: 0px !important; bottom: auto !important; left: auto !important; position: absolute !important; border: 0px !important; min-height: auto !important; min-width: auto !important; max-height: none !important; max-width: none !important; padding: 0px !important; margin: 0px !important; transition-property: none !important; transform: none !important; width: 12px !important; height: 12px !important; display: block !important; z-index: 999998 !important; cursor: ne-resize !important; float: none !important; border-radius: unset !important; pointer-events: auto !important;"></div>
+         <div id="Ed7karo-1592736799447" class="" style="outline: none !important; visibility: visible !important; resize: none !important; box-shadow: none !important; overflow: visible !important; background: none transparent !important; opacity: 1 !important; top: auto !important; right: auto !important; bottom: 0px !important; left: 0px !important; position: absolute !important; border: 0px !important; min-height: auto !important; min-width: auto !important; max-height: none !important; max-width: none !important; padding: 0px !important; margin: 0px !important; transition-property: none !important; transform: none !important; width: 12px !important; height: 12px !important; display: block !important; z-index: 999998 !important; cursor: sw-resize !important; float: none !important; border-radius: unset !important; pointer-events: auto !important;"></div>
+         <div id="qywnBcz-1592736799448" class="" style="outline: none !important; visibility: visible !important; resize: none !important; box-shadow: none !important; overflow: visible !important; background: none transparent !important; opacity: 1 !important; top: auto !important; right: 0px !important; bottom: 0px !important; left: auto !important; position: absolute !important; border: 0px !important; min-height: auto !important; min-width: auto !important; max-height: none !important; max-width: none !important; padding: 0px !important; margin: 0px !important; transition-property: none !important; transform: none !important; width: 12px !important; height: 12px !important; display: block !important; z-index: 999999 !important; cursor: se-resize !important; float: none !important; border-radius: unset !important; pointer-events: auto !important;"></div>
+         <iframe id="tkXYTJZ-1592736799540" src="about:blank" frameborder="0" scrolling="no" title="chat widget" class="" style="outline: none !important; visibility: visible !important; resize: none !important; box-shadow: none !important; overflow: visible !important; background: none transparent !important; opacity: 1 !important; position: fixed !important; border: 0px !important; min-height: auto !important; min-width: auto !important; max-height: none !important; max-width: none !important; padding: 0px !important; margin: 0px !important; transition-property: none !important; transform: none !important; width: 378px !important; z-index: 999999 !important; cursor: auto !important; float: none !important; border-radius: unset !important; pointer-events: auto !important; bottom: 50px !important; top: auto !important; left: 10px !important; right: auto !important; display: none !important; height: 0px !important;"></iframe>
+      </div>
+      <script type="text/javascript">
+	function MyFunction() {
+  document.getElementById("myList").style.overflow = "visible";
+  document.getElementById("cros").style.display = "block";
+}
+	function MyFunctionClose() {
+  document.getElementById("myList").style.overflow = "hidden";
+  document.getElementById("cros").style.display = "none";
+}
+function CloseNoti() {
+var element = document.getElementById("myNoti");
+   element.style.position="absolute";
+   element.style.overflow="auto";
+   element.style.opacity="0";
+}
+function myAddNoti() {
+   var element = document.getElementById("myNoti");
+   element.style.position="fixed";
+   element.style.overflow="visible";
+   element.style.opacity="1";
+}
+
+$(document).ready(function(){
+			$('.customer-logos').slick({
+				slidesToShow: 4,
+				slidesToScroll: 1,
+				autoplay: true,
+				autoplaySpeed: 1000,
+				arrows: false,
+				dots: false,
+					pauseOnHover: false,
+					responsive: [{
+					breakpoint: 768,
+					settings: {
+						slidesToShow: 3
+					}
+				}, {
+					breakpoint: 520,
+					settings: {
+						slidesToShow: 2
+					}
+				}]
+			});
+		});
+</script>
+   </body>
+</html>
